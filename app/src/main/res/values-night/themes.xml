@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.WorkScheduler" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/accent_lilac</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimaryContainer">@color/accent_lilac_20</item>
+        <item name="colorOnPrimaryContainer">@color/accent_lilac</item>
+        <item name="colorSecondary">@color/accent_teal</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondaryContainer">@color/accent_teal_20</item>
+        <item name="colorOnSecondaryContainer">@color/accent_teal</item>
+        <item name="colorTertiary">@color/accent_gold</item>
+        <item name="colorOnTertiary">@color/black</item>
+        <item name="colorTertiaryContainer">@color/accent_gold_20</item>
+        <item name="colorOnTertiaryContainer">@color/accent_gold</item>
+        <item name="android:colorBackground">@color/bg_primary</item>
+        <item name="colorSurface">@color/bg_surface</item>
+        <item name="colorSurfaceVariant">@color/glass_bg</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="auroraBackground">@drawable/aurora_bg</item>
+        <item name="colorOutline">@color/glass_border</item>
+        <item name="customTextPrimary">@color/text_primary</item>
+        <item name="customTextSecondary">@color/text_secondary</item>
+        <item name="customTextMuted">@color/text_muted</item>
+        <item name="glassBg">@color/glass_bg</item>
+        <item name="glassBorder">@color/glass_border</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/bg_primary</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationStyle</item>
+    </style>
+</resources>

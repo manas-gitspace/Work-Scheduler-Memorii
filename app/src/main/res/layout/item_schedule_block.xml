@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scheduleCardRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/glass_card"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginBottom="10dp"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <!-- Content -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schedule Title"
+            android:textColor="?attr/customTextPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/textTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08:00"
+                android:textColor="?attr/customTextSecondary"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif" />
+
+            <ImageView
+                android:id="@+id/iconAlarm"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_alarm"
+                app:tint="?attr/customTextMuted"
+                android:layout_marginStart="8dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Priority Badge -->
+    <TextView
+        android:id="@+id/textPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="3dp"
+        android:layout_marginHorizontal="8dp"
+        android:visibility="gone" />
+
+    <!-- Colored Accent Bar (Designer stick on the right) -->
+    <View
+        android:id="@+id/accentBar"
+        android:layout_width="8dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp" />
+
+</LinearLayout>

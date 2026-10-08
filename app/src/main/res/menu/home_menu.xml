@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_theme"
+        android:title="Theme"
+        android:icon="@drawable/ic_theme"
+        app:iconTint="?attr/customTextPrimary"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_share"
+        android:title="Share"
+        android:icon="@drawable/ic_share1"
+        app:iconTint="?attr/customTextPrimary"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_more"
+        android:title="More"
+        android:icon="@drawable/menu"
+        app:iconTint="?attr/customTextPrimary"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/action_sort"
+                android:title="Sort By" />
+            <item
+                android:id="@+id/action_delete"
+                android:title="Delete Schedule" />
+            <item
+                android:id="@+id/action_toggle_widget"
+                android:title="Toggle Schedule Widget" />
+            <item
+                android:id="@+id/action_show_completed"
+                android:title="Show Completed"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/action_show_all"
+                android:title="Show All"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/action_show_incomplete"
+                android:title="Show Incomplete"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+</menu>

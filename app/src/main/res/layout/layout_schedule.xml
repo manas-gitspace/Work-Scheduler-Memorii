@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scheduleContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <!-- Month Navigation Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/btnPrevMonth"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_chevron_left"
+            app:tint="?attr/customTextPrimary"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Previous month"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/textMonthYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="AUG, 2026"
+            android:textColor="?attr/customTextPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp" />
+
+        <ImageView
+            android:id="@+id/btnNextMonth"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_chevron_right"
+            app:tint="?attr/customTextPrimary"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Next month"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+    <!-- Full Calendar Container (collapsible) -->
+    <LinearLayout
+        android:id="@+id/fullCalendarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Day-of-Week Headers -->
+        <LinearLayout
+            android:id="@+id/dayHeaderRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp">
+
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Sun" android:gravity="center" android:textColor="?attr/customTextMuted" android:textSize="13sp" android:fontFamily="sans-serif-medium" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Mon" android:gravity="center" android:textColor="?attr/customTextMuted" android:textSize="13sp" android:fontFamily="sans-serif-medium" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Tue" android:gravity="center" android:textColor="?attr/customTextMuted" android:textSize="13sp" android:fontFamily="sans-serif-medium" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Wed" android:gravity="center" android:textColor="?attr/customTextMuted" android:textSize="13sp" android:fontFamily="sans-serif-medium" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Thu" android:gravity="center" android:textColor="?attr/customTextMuted" android:textSize="13sp" android:fontFamily="sans-serif-medium" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Fri" android:gravity="center" android:textColor="?attr/customTextMuted" android:textSize="13sp" android:fontFamily="sans-serif-medium" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Sat" android:gravity="center" android:textColor="?attr/customTextMuted" android:textSize="13sp" android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+        <!-- Calendar Grid -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/calendarGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never" />
+    </LinearLayout>
+
+    <!-- Collapsed Week Strip (hidden by default) -->
+    <HorizontalScrollView
+        android:id="@+id/weekStripScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="gone"
+        android:paddingHorizontal="12dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/weekStripContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center" />
+    </HorizontalScrollView>
+
+    <!-- Collapse/Expand Handle -->
+    <LinearLayout
+        android:id="@+id/calendarCollapseHandle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingVertical="6dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <View
+            android:id="@+id/collapseHandleBar"
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:background="@drawable/bg_timeline_line" />
+    </LinearLayout>
+
+    <!-- Morning to Night Routine Tab Bar -->
+    <HorizontalScrollView
+        android:id="@+id/routineTabsScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="20dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/routineTabsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:orientation="horizontal"
+            android:background="@drawable/glass_card"
+            android:padding="4dp"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/routineTabAll"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="All"
+                android:textColor="?attr/customTextPrimary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="16dp"
+                android:gravity="center"
+                android:background="@drawable/glass_card_active" />
+
+            <TextView
+                android:id="@+id/routineTabMorning"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Morning"
+                android:textColor="?attr/customTextSecondary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="16dp"
+                android:gravity="center"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/routineTabAfternoon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Afternoon"
+                android:textColor="?attr/customTextSecondary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="16dp"
+                android:gravity="center"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/routineTabEvening"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Evening"
+                android:textColor="?attr/customTextSecondary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="16dp"
+                android:gravity="center"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/routineTabNight"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Night"
+                android:textColor="?attr/customTextSecondary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="16dp"
+                android:gravity="center"
+                android:background="@android:color/transparent" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Selected Date Label -->
+    <TextView
+        android:id="@+id/scheduleDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thursday, June 8"
+        android:textColor="?attr/customTextSecondary"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Schedule List for Selected Date -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="4dp"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false" />
+
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/scheduleEmptyState"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📅"
+            android:textSize="48sp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/scheduleEmptyStateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No schedules for this day"
+            android:textColor="?attr/customTextSecondary"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap + to add a schedule"
+            android:textColor="?attr/customTextMuted"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+</LinearLayout>

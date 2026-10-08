@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/splashRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient"
+    android:clipChildren="false">
+
+    <!-- Particles Container (Can be populated dynamically in Java for random floating) -->
+    <FrameLayout
+        android:id="@+id/particlesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Concentric Rings Container -->
+    <FrameLayout
+        android:id="@+id/ringsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0">
+        <ImageView
+            android:id="@+id/ring1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/shape_circle_ring" />
+        <ImageView
+            android:id="@+id/ring2"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/shape_circle_ring" />
+        <ImageView
+            android:id="@+id/ring3"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/shape_circle_ring" />
+        <ImageView
+            android:id="@+id/ring4"
+            android:layout_width="600dp"
+            android:layout_height="600dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/shape_circle_ring" />
+    </FrameLayout>
+
+    <!-- Center Content -->
+    <LinearLayout
+        android:id="@+id/centerContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="80dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:alpha="0"
+        android:translationY="20dp">
+
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/circle_shape"
+            android:backgroundTint="#0f1123"
+            android:elevation="8dp">
+            
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/shape_circle_ring"
+                app:tint="#1AFFFFFF" />
+                
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_lightbulb_glow"
+                app:tint="#FFFFFF" />
+                
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/shape_particle_white"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="-5dp"
+                android:backgroundTint="#5DCAA5" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Memorii"
+            android:textColor="#FFFFFF"
+            android:textSize="56sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginTop="32dp"
+            android:letterSpacing="-0.03" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="your memory, always with you"
+            android:textColor="#5DCAA5"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGetStarted"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginBottom="80dp"
+        android:text="Get started"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_button_gradient"
+        android:visibility="gone"
+        android:alpha="0"
+        android:translationY="20dp" />
+
+</FrameLayout>

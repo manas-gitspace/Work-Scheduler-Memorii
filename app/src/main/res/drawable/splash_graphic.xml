@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="200dp"
+    android:height="222dp"
+    android:viewportWidth="360"
+    android:viewportHeight="400">
+
+    <!-- Rings -->
+    <path android:pathData="M 180 94 a 106 106 0 1 0 0 212 a 106 106 0 1 0 0 -212"
+        android:strokeColor="#CECBF6" android:strokeWidth="0.5" android:strokeAlpha="0.15" />
+    <path android:pathData="M 180 110 a 90 90 0 1 0 0 180 a 90 90 0 1 0 0 -180"
+        android:strokeColor="#AFA9EC" android:strokeWidth="1" android:strokeAlpha="0.3" />
+    <path android:pathData="M 180 130 a 70 70 0 1 0 0 140 a 70 70 0 1 0 0 -140"
+        android:strokeColor="#5DCAA5" android:strokeWidth="1" android:strokeAlpha="0.25" />
+
+    <!-- Core circle -->
+    <path android:pathData="M 180 142 a 58 58 0 1 0 0 116 a 58 58 0 1 0 0 -116"
+        android:fillColor="#26215C" />
+
+    <!-- Brain silhouette -->
+    <path android:pathData="M154 200 Q154 174 180 174 Q206 174 206 200 Q206 213 197 218 L197 228 L163 228 L163 218 Q154 213 154 200Z"
+        android:fillColor="#CECBF6" />
+
+    <!-- Core highlight bar -->
+    <path android:pathData="M 167.5 231 h 25 a 4.5 4.5 0 0 1 4.5 4.5 v 0 a 4.5 4.5 0 0 1 -4.5 4.5 h -25 a 4.5 4.5 0 0 1 -4.5 -4.5 v 0 a 4.5 4.5 0 0 1 4.5 -4.5 z"
+        android:fillColor="#5DCAA5" />
+
+    <!-- Spark line -->
+    <path android:pathData="M 180 260 L 180 290"
+        android:strokeWidth="2.5" android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:type="linear"
+                android:startX="180"
+                android:startY="260"
+                android:endX="180"
+                android:endY="290">
+                <item android:color="#5DCAA5" android:offset="0.0" />
+                <item android:color="#CECBF6" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:pathData="M 180 288 a 8 8 0 1 0 0 16 a 8 8 0 1 0 0 -16"
+        android:fillColor="#1D9E75" />
+    <path android:pathData="M 180 282 a 14 14 0 1 0 0 28 a 14 14 0 1 0 0 -28"
+        android:strokeColor="#5DCAA5" android:strokeWidth="1" android:strokeAlpha="0.5" />
+
+    <!-- Floating Dots -->
+    <path android:pathData="M 108 172 a 6 6 0 1 0 0 12 a 6 6 0 1 0 0 -12" android:fillColor="#9FE1CB" android:fillAlpha="0.8" />
+    <path android:pathData="M 252 172 a 6 6 0 1 0 0 12 a 6 6 0 1 0 0 -12" android:fillColor="#9FE1CB" android:fillAlpha="0.8" />
+    <path android:pathData="M 86 214 a 4 4 0 1 0 0 8 a 4 4 0 1 0 0 -8" android:fillColor="#CECBF6" android:fillAlpha="0.6" />
+    <path android:pathData="M 274 214 a 4 4 0 1 0 0 8 a 4 4 0 1 0 0 -8" android:fillColor="#CECBF6" android:fillAlpha="0.6" />
+    <path android:pathData="M 148 139 a 5 5 0 1 0 0 10 a 5 5 0 1 0 0 -10" android:fillColor="#AFA9EC" android:fillAlpha="0.7" />
+    <path android:pathData="M 212 139 a 5 5 0 1 0 0 10 a 5 5 0 1 0 0 -10" android:fillColor="#AFA9EC" android:fillAlpha="0.7" />
+    <path android:pathData="M 96 157 a 3 3 0 1 0 0 6 a 3 3 0 1 0 0 -6" android:fillColor="#5DCAA5" android:fillAlpha="0.5" />
+    <path android:pathData="M 264 157 a 3 3 0 1 0 0 6 a 3 3 0 1 0 0 -6" android:fillColor="#5DCAA5" android:fillAlpha="0.5" />
+    <path android:pathData="M 68 193 a 3 3 0 1 0 0 6 a 3 3 0 1 0 0 -6" android:fillColor="#AFA9EC" android:fillAlpha="0.4" />
+    <path android:pathData="M 292 193 a 3 3 0 1 0 0 6 a 3 3 0 1 0 0 -6" android:fillColor="#AFA9EC" android:fillAlpha="0.4" />
+    <path android:pathData="M 134 316 a 4 4 0 1 0 0 8 a 4 4 0 1 0 0 -8" android:fillColor="#9FE1CB" android:fillAlpha="0.5" />
+    <path android:pathData="M 220 307 a 3 3 0 1 0 0 6 a 3 3 0 1 0 0 -6" android:fillColor="#CECBF6" android:fillAlpha="0.4" />
+    <path android:pathData="M 72 277.5 a 2.5 2.5 0 1 0 0 5 a 2.5 2.5 0 1 0 0 -5" android:fillColor="#AFA9EC" android:fillAlpha="0.35" />
+    <path android:pathData="M 300 297.5 a 2.5 2.5 0 1 0 0 5 a 2.5 2.5 0 1 0 0 -5" android:fillColor="#5DCAA5" android:fillAlpha="0.4" />
+
+</vector>

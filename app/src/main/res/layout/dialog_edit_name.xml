@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What should we call you?"
+        android:textColor="?attr/customTextSecondary"
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_bg"
+        android:hint="Enter your name"
+        android:textColorHint="?attr/customTextMuted"
+        android:textColor="?attr/customTextPrimary"
+        android:padding="16dp"
+        android:singleLine="true"
+        android:textSize="18sp" />
+</LinearLayout>

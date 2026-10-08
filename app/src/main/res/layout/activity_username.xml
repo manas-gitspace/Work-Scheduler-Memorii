@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/usernameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.workscheduler.FluidBackgroundView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="28dp">
+
+        <LinearLayout
+            android:id="@+id/formCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/glass_card_active"
+            android:padding="32dp"
+            android:elevation="8dp"
+            android:alpha="0"
+            android:translationY="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome!"
+                android:textColor="?attr/customTextPrimary"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What should we call you?"
+                android:textColor="?attr/customTextSecondary"
+                android:textSize="15sp"
+                android:layout_marginBottom="28dp" />
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Enter your name"
+                android:textColorHint="?attr/customTextMuted"
+                android:textColor="?attr/customTextPrimary"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:background="@drawable/edittext_bg"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <android.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="24dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Continue"
+            android:textColor="#FF000000"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/bg_button_gradient"
+            android:alpha="0"
+            android:translationY="20dp"
+            android:letterSpacing="0.02" />
+    </LinearLayout>
+</FrameLayout>

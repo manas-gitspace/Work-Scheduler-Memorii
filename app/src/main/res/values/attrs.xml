@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="auroraBackground" format="reference" />
+    <attr name="customTextPrimary" format="color|reference" />
+    <attr name="customTextSecondary" format="color|reference" />
+    <attr name="customTextMuted" format="color|reference" />
+    <attr name="glassBg" format="color|reference" />
+    <attr name="glassBorder" format="color|reference" />
+    <attr name="glassBgActive" format="color|reference" />
+    <attr name="glassBorderActive" format="color|reference" />
+</resources>
