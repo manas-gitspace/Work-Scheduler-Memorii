@@ -1,0 +1,32 @@
+name: Release APK
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create GitHub Release with APK
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Memorii Android App ${{ github.ref_name }}
+          files: apk/app-debug.apk
+          draft: false
+          prerelease: false
+          body: |
+            ### 📱 Memorii Android Application
+            
+            Direct APK download for Android devices:
+            - **[Download app-debug.apk](https://github.com/manas-gitspace/Work-Scheduler-Memorii/releases/download/${{ github.ref_name }}/app-debug.apk)**
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
